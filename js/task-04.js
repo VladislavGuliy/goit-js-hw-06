@@ -11,7 +11,6 @@ function handleDecrementIncrementClick() {
     newValue = counterValue - 1;
   }
   value.textContent = newValue;
-  console.log(counterValue);
 }
 
 buttons.forEach((button) => {
