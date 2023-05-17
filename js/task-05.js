@@ -7,8 +7,5 @@ const inputEmpty = refs.nameOutput.textContent;
 refs.nameInput.addEventListener("input", onFormInput);
 
 function onFormInput(event) {
-  refs.nameOutput.textContent = event.currentTarget.value;
-  if (event.currentTarget.value === "") {
-    refs.nameOutput.textContent = inputEmpty;
-  }
+   refs.nameOutput.textContent = event.currentTarget.value !== "" ? event.currentTarget.value : inputEmpty;
 }
