@@ -2,11 +2,12 @@ const inputRef = document.querySelector("#validation-input");
 
 inputRef.addEventListener("blur", onInputBlur);
 
-function onInputBlur() {
-  if (this.value.length === Number(this.dataset.length)) {
-    inputValid(this);
+function onInputBlur(event) {
+  const contentInput = event.currentTarget;
+  if (contentInput.value.length === Number(contentInput.dataset.length)) {
+    inputValid(contentInput);
   } else {
-    inputInvalid(this);
+    inputInvalid(contentInput);
   }
 }
 
